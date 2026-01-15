@@ -68,7 +68,9 @@ It automates booking workflows, reminders, statistics, and administrative operat
 ## Tech Stack  
 
 **Frontend**
-- [PLACEHOLDER – e.g., React, Vite, Tailwind]
+- React
+- Vite
+- Tailwind
 
 **Backend**
 - Node.js  
