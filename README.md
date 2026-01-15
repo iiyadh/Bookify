@@ -105,10 +105,10 @@ It automates booking workflows, reminders, statistics, and administrative operat
 
 ```bash
 # Clone repository
-git clone [PLACEHOLDER – repository URL]
+git clone https://github.com/iiyadh/Bookify.git
 
 # Navigate into project
-cd project-name
+cd Bookify
 
 # Install dependencies
 npm install
@@ -123,13 +123,13 @@ npm run dev
 Backend will run on:
 
 ```
-http://localhost:PORT
+http://localhost:5000
 ```
 
 Frontend will run on:
 
 ```
-http://localhost:PORT
+http://localhost:5173
 
 ---
 
@@ -159,31 +159,47 @@ FRONTEND_URL=http://localhost:5173
 ```http
 POST /api/auth/register
 POST /api/auth/login
+POST /api/auth/google/:token
+POST /api/auth/facebook/:token
+POST /api/auth/logout
+GET /api/auth/checkAuth
 ```
+
+### Password Retrive
+```http
+POST /api/password/forgot
+POST /api/password/reset/:token
+```
+
+
 
 ### Appointments
 
 ```http
 POST   /api/appointments
 GET    /api/appointments
-GET    /api/appointments/:id
-PATCH  /api/appointments/:id/status
-DELETE /api/appointments/:id
+GET    /api/appointments/date
+GET    /api/appointments/user
+PUT    /api/appointments/cancel/:id
+PUT    /api/appointments/approve/:id
+PUT    /api/appointments/reject/:id
+PUT    /api/appointments/reset/:id
 ```
 
 ### Services
 
 ```http
-POST   /api/services
 GET    /api/services
+POST   /api/services
 PUT    /api/services/:id
 DELETE /api/services/:id
 ```
 ### Users (Admin)
 
 ```http
-GET    /api/users
-PATCH  /api/users/:id/block
+GET   /api/users
+put  /api/users/block/:id
+put  /api/users/unblock/:id
 ```
 > Full API documentation can be added using Swagger or Postman collections.
 
@@ -252,5 +268,4 @@ project-root/
 
 > Available for freelance projects, long-term collaborations, and custom system development.
 
-```
 ```
