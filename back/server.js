@@ -15,7 +15,6 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization', "X-Requested-With"],
     credentials: true,
 }));
-app.use(cookieParser());
 connectDB();
 
 
@@ -25,6 +24,7 @@ app.use('/api/services', require('./route/serviceRoutes'));
 app.use('/api/appointements', require('./route/appointementRoute'));
 app.use('/api/password', require('./route/passwordRoute'));
 
+app.use(cookieParser());
 
 app.listen(process.env.PORT, () => {
     console.log('Server is running on port 5000');
