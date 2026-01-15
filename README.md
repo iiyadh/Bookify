@@ -1,4 +1,3 @@
-````markdown
 # Smart Appointment Management Platform  
 A scalable, multi-business appointment booking system for managing services, schedules, users, and automated notifications.
 
@@ -129,7 +128,6 @@ Frontend will run on:
 
 ```
 http://localhost:PORT
-```
 
 ---
 
