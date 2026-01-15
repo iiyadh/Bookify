@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./lib/db');
-const coockieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 app = express();
 require('dotenv').config();
 require('./cron/reminderJob');
@@ -10,12 +10,12 @@ require('./cron/reminderJob');
 
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: ['http://localhost:5173',"https://bookify-psi-three.vercel.app"],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', "X-Requested-With"],
     credentials: true,
 }));
-app.use(coockieParser());
+app.use(cookieParser());
 connectDB();
 
 
