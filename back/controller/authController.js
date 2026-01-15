@@ -31,8 +31,10 @@ const login = async (req , res)=>{
         const token = generateToken(user , user.role);
         res.cookie('token', token, {
                 httpOnly: true ,
-                sameSite: 'None',
-                maxAge: remmberMe ? 7 * 24 * 60 * 60 * 1000 : null
+                sameSite: 'none',
+                secure: true,
+                maxAge: remmberMe ? 7 * 24 * 60 * 60 * 1000 : null,
+                path: "/",
             });
         res.json({message : 'Login successful' , role : user.role});
     }catch(err){
@@ -57,7 +59,9 @@ const register = async (req , res)=>{
         const token = generateToken(user);
         res.cookie('token', token, {
                 httpOnly: true ,
-                sameSite: 'None',
+                secure: true,
+                sameSite: 'none',
+                path: "/", 
             });
         res.status(201).json({ message: 'User registered successfully' , role : user.role});
     }catch(err){
@@ -85,7 +89,9 @@ const signWithGoogle = async (req, res) =>{
         const jwtToken = generateToken(user);
         res.cookie('token', jwtToken, {
                 httpOnly: true ,
+                secure: true,
                 sameSite: 'None',
+                path: "/",  
             });
         res.json({ message: 'Login with Google successful' , role : user.role});
     }catch(err){
@@ -117,7 +123,9 @@ const signWithFacebook = async (req, res) =>{
         const jwtToken = generateToken(user);
         res.cookie('token', jwtToken, {
                 httpOnly: true ,
+                secure: true,
                 sameSite: 'None',
+                path: "/",
             });
         res.json({ message: 'Login with Facebook successful' , role : user.role});
     }catch(err){
