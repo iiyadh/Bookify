@@ -197,9 +197,9 @@ DELETE /api/services/:id
 ### Users (Admin)
 
 ```http
-GET   /api/users
-put  /api/users/block/:id
-put  /api/users/unblock/:id
+GET  /api/users
+PUT  /api/users/block/:id
+PUT  /api/users/unblock/:id
 ```
 > Full API documentation can be added using Swagger or Postman collections.
 
