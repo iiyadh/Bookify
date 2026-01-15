@@ -4,7 +4,7 @@ A scalable, multi-business appointment booking system for managing services, sch
 ---
 
 ## Live Demo / Preview  
-**Live Demo:** [PLACEHOLDER – Add demo URL]  
+**Live Demo:** [Click here](bookify-psi-three.vercel.app)
 **Video Walkthrough:** [PLACEHOLDER – Add video link]
 
 ---
