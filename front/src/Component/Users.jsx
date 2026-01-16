@@ -64,7 +64,7 @@ const Users = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-white shadow-lg rounded-lg">
+                <div className="max-h-100 bg-white shadow-lg rounded-lg overflow-y-auto">
                     <table className="min-w-full divide-y divide-gray-200">
                         <thead className="bg-gray-800">
                             <tr>
@@ -88,7 +88,7 @@ const Users = () => {
                                 </th>
                             </tr>
                         </thead>
-                        <tbody className="max-h-100 bg-white divide-y divide-gray-200 overflow-y-auto">
+                        <tbody className="bg-white divide-y divide-gray-200">
                             {filterdUsers.map((user) => (
                                 <tr key={user._id} className="hover:bg-gray-50 transition-colors duration-200">
                                     <td className="px-6 py-4 whitespace-nowrap">
