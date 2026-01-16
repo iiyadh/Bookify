@@ -128,7 +128,6 @@ http://localhost:5000
 
 Frontend will run on:
 
-```
 http://localhost:5173
 
 ---
