@@ -23,6 +23,25 @@ const verifyToken = (req, res, next) => {
     }
 };
 
+const cronVerifyToken = (req,res,next) => {
+    const token = req.headers.authorization?.split(' ')[1];
+    console.log(token);
+    if (!token) {
+        throw new Error('No token provided');
+    }
+   try{
+       if (token == "63f4945d921d599f27ae4fdf5bada3f1") {
+           next();
+       } else {
+           return res.status(401).json({ message: 'Unauthorized' });
+       }
+    
+   }catch(err){
+        console.log(err);
+        throw new Error('Invalid token');
+   }
+};
+
 const authorizeRoles = (...allowedRoles) => {
   return (req, res, next) => {
     if (!allowedRoles.includes(req.user.role)) {
@@ -35,4 +54,4 @@ const authorizeRoles = (...allowedRoles) => {
 
 
 
-module.exports = { verifyToken , authorizeRoles };
+module.exports = { verifyToken , authorizeRoles ,cronVerifyToken };

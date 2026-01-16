@@ -6,9 +6,10 @@ const {
     approveAppointement,
     rejectAppointement,
     resetAppointement,
-    getAppointmenetByDate
+    getAppointmenetByDate,
+    sendReminder
 } = require('../controller/appointementController');
-const { verifyToken , authorizeRoles } = require('../middleware/authMiddleware');
+const { verifyToken , authorizeRoles , cronVerifyToken } = require('../middleware/authMiddleware');
 const router = require('express').Router();
 
 
@@ -20,6 +21,7 @@ router.put('/cancel/:id' , verifyToken , cancelAppointement);
 router.put('/approve/:id' , verifyToken , authorizeRoles('admin') , approveAppointement);
 router.put('/reject/:id' , verifyToken , authorizeRoles('admin') , rejectAppointement);
 router.put('/reset/:id' , verifyToken , authorizeRoles('admin') , resetAppointement);
+router.post('/send-reminders', cronVerifyToken, sendReminder);
 
 
 
