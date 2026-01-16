@@ -64,7 +64,7 @@ const Users = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div className="max-h-100 bg-white shadow-lg rounded-lg overflow-y-auto">
                     <table className="min-w-full divide-y divide-gray-200">
                         <thead className="bg-gray-800">
                             <tr>
