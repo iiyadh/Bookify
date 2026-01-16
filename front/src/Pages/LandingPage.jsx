@@ -65,9 +65,9 @@ const LandingPage = () => {
                 <a href="#features" className="text-slate-700 hover:text-slate-900 font-medium transition">Features</a>
                 <a href="#how-it-works" className="text-slate-700 hover:text-slate-900 font-medium transition">How It Works</a>
                 <a href="#pricing" className="text-slate-700 hover:text-slate-900 font-medium transition">Pricing</a>
-                <button className="bg-slate-900 text-white px-6 py-2 rounded-lg font-medium hover:bg-slate-800 transition w-full">
+                <Link to='/login' className="bg-slate-900 text-white px-6 py-2 rounded-lg font-medium hover:bg-slate-800 transition w-full">
                   Get Started
-                </button>
+                </Link>
               </div>
             </div>
           )}
@@ -87,13 +87,13 @@ const LandingPage = () => {
               Designed for clinics, consultants, gyms, and service-based businesses.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="bg-slate-900 text-white px-8 py-4 rounded-xl font-medium hover:bg-slate-800 transition flex items-center justify-center gap-2">
+              <Link to='/login' className="bg-slate-900 text-white px-8 py-4 rounded-xl font-medium hover:bg-slate-800 transition flex items-center justify-center gap-2">
                 Start Free Trial
                 <ChevronRight size={20} />
-              </button>
-              <button className="border-2 border-slate-900 text-slate-900 px-8 py-4 rounded-xl font-medium hover:bg-slate-50 transition">
+              </Link>
+              <Link to='/login' className="border-2 border-slate-900 text-slate-900 px-8 py-4 rounded-xl font-medium hover:bg-slate-50 transition">
                 Schedule a Demo
-              </button>
+              </Link>
             </div>
           </div>
           
