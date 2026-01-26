@@ -53,7 +53,14 @@ It automates booking workflows, reminders, statistics, and administrative operat
   - View appointment details  
 - User management (block / unblock users)  
 - Dashboard statistics and analytics  
-- Automated email reminders using scheduled cron jobs  
+- Automated email reminders using scheduled cron jobs
+
+***Admin Account***
+*Email* : admin@example.com
+*Password* : adminadmin
+
+*If you want to try admin features*
+
 
 ### Platform Qualities
 - Secure authentication and role-based access  
